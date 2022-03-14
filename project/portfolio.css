@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital@1&display=swap');
+
+:root{
+    --color-1:#682ae9;
+    --black:#0d1111;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    
+}
+
+html{
+    
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+    
+}
+body{
+    height: 100vh;
+    width: 100%;
+    
+    
+}
+.navbar{
+    background: var(--black);
+    
+}
+.nav-link{
+    color: white;
+}
+#navbarSupportedContent > ul > li > a{
+    color: white;
+    font-weight: 200;
+}
+.navbar-brand{
+    color: var(--color-1);
+    font-weight: bold;
+}
+#navbarSupportedContent > ul > li >.active ,
+#navbarSupportedContent > ul > li > a:focus,
+#navbarSupportedContent > ul > li > a:hover{
+    color: var(--color-1);
+    font-weight: 300;
+    
+    
+}
+.fa-brands{
+    font-size: 24px;
+}
+.fa-brands:hover,
+.featurs .fa-brands:hover{
+    
+    color: white;
+}
+.navbar-toggler:focus{
+    color: var(--color-1);
+    box-shadow: none;
+
+}
+.navbar-toggler{
+    color: white;
+    
+}
+.btns{  
+    width: 200px;
+    height: 53px;
+    font-size: 1.1em;
+    background: none;
+    border: none;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    z-index: 1000;
+   
+  }  
+  .btns::before,.btns::after{  
+    content: '';  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+    height: 100%;  
+    background: #00000000;  
+    backdrop-filter: blur(20px);  
+    border-radius: 10px;  
+    z-index: -2;  
+  }  
+  .btns::after{  
+    width: 110%;  
+    height: 90%;  
+    top: 25%;  
+    left: -5%;  
+    background: var(--color-1);  
+    z-index: -3;  
+    transform: scaleX(0.5);  
+    transition: all .6s;  
+  }  
+  .btns:hover::after{  
+    transform: scaleX(1.01) translateY(-15px);  
+  } 
+
+
+.typing::after{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 15%;
+    border-right: 2px #682ae9 solid;
+    animation: blink .5s infinite ease;
+   
+
+}  
+@keyframes blink{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.landing{
+    background: var(--black);
+    height: calc(100vh - 72px);
+}
+.featurs{
+    background: var(--black);
+}
+.featurs .fa-brands{
+    color: var(--color-1);
+    font-size: 60px;
+    
+}
+.feat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.feat .btn{
+    color:var(--color-1);
+    border: 2px solid #682ae9 ;
+    
+}
+.feat .btn:hover{
+    color: white;
+    border: none;
+    background: var(--color-1);
+}
+h3{
+    color: var(--color-1);
+    font-weight: bold;
+    font-family: 'Space Mono', monospace;
+}
+
+  .circular {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+  }
+  .circular:before {
+    content: "";
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    background-color: var(--black);
+    border-radius: 50%;
+  }
+  .value {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    color: white;
+  }
+  .feat .btn{
+    font-family: 'Space Mono', monospace;
+  }
+  .animation{
+    height: 80vh;
+    background-color:var(--black);
+    position: relative;
+    overflow: hidden;
+}
+.bool{
+    height: 70px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+.animation h2{
+    font-family: 'Space Mono', monospace;
+
+}
+.nmb {
+    min-height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    max-width: 75%;
+}
+.title{
+    font-size: 1.8rem;
+    line-height: 1;
+    padding: 0.25rem 0;
+    position: relative;
+    left: -12rem;
+    color: #2d9687;
+    
+}
+.content{
+    width: 35rem;
+    max-width: 60%;
+    font-size: 1.375rem;
+   
+}
+
+.content p {
+    
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1.2rem;
+    position: relative;
+    left: 15%;
+    text-align: start;
+
+    
+    padding-bottom: 0.25em;
+    margin: 1em 0;
+    line-height: 2rem;
+}
+
+.content p:nth-child(2),
+.content p:nth-child(3){
+    color: #e9b171;
+}
+.training .title{
+    color: #e9b171;
+}
+.training p:nth-child(2){
+    font-weight: bold;
+}
+.training p:first-child{
+    font-size: 1rem;
+}
+.form input,
+.form textarea{
+    background: var(--black);
+    border: none;
+    border-bottom: 1px solid var(--color-1);
+    outline: none;
+    border-radius: none;
+}
+
+.form input:focus,
+.form textarea:focus{
+    background-color: var(--black);
+    box-shadow: none;
+    border-bottom: 1px solid var(--color-1);
+}
+span input[type='submit']{
+    border: 1px solid var(--color-1);
+    padding: 0.5rem 1.8rem;
+    color: white;
+    font-weight: bold;
+
+}
+span input[type='submit']:focus{
+    background: var(--color-1);
+    color: white;
+}
+span i{
+    font-size: 24px;
+    color: var(--color-1);
+}
+span i:hover{
+    color: white;
+    font-size: 27px;
+}
+.form{
+
+    position: relative;
+    left: 10%;
+    padding-bottom: 0.25em;
+    margin: 1em 0;
+
+}
+
+span .fa-arrow-turn-up{
+    color: white;
+    background: var(--color-1);
+    width: 45px;
+    height: 45px;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: 0.5s ease;
+    cursor: pointer;
+    position: relative;
+    
+
+}
+span .fa-arrow-turn-up:hover{
+    border-radius: 50%;
+}
+::-webkit-scrollbar{
+    width: 7px;
+    
+}
+::-webkit-scrollbar-track{
+    background: var(--black);
+}
+::-webkit-scrollbar-thumb{
+    background: var(--color-1);
+    border-radius: 4px;
+}
